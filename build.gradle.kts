@@ -37,6 +37,12 @@ dependencies {
 
     implementation(platform("software.amazon.awssdk:bom:2.27.21"))
     implementation("software.amazon.awssdk:s3")
+
+
+}
+
+springBoot {
+    mainClass.set("ru.krupnoveo.edu.barbershop_service.BarbershopServiceApplication")
 }
 
 tasks.withType<Test> {
