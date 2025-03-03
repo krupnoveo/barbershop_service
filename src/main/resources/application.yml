@@ -1,8 +1,8 @@
 spring:
   application:
-    name: BARBERSHOP-SERVICE
+    name: ${barbershop.service.name}
   datasource:
-    url: jdbc:postgresql://barbershop_service_postgres:5432/barbershop_db
+    url: jdbc:postgresql://${postgres.host}:${postgres.port}/barbershop_db
     username: ${DB_USER}
     password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
@@ -20,6 +20,10 @@ spring:
     hibernate:
       ddl-auto: validate
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.service.host}:${eureka.service.port}/eureka
 
 
 cloud:
@@ -36,4 +40,4 @@ cloud:
       name: barbershop-app
 
 server:
-  port: 8081
+  port: ${barbershop.service.port}

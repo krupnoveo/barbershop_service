@@ -1,7 +1,10 @@
 create table if not exists barbershops (
     id uuid primary key default gen_random_uuid(),
     name text not null,
+    description text not null,
     address text not null,
+    latitude double precision not null,
+    longitude double precision not null,
     phone_number varchar(255) not null,
     working_time text not null,
     photo text

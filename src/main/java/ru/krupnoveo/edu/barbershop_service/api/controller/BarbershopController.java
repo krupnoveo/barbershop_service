@@ -68,7 +68,7 @@ public class BarbershopController {
                 .body(barbershopService.getBarbershopPhoto(id));
     }
 
-    @PostMapping("/{id}/photo")
+    @PostMapping("/{id}/update/photo")
     public ResponseEntity<Void> setBarbershopPhoto(
             @PathVariable UUID id,
             @RequestParam(value = "photo") MultipartFile photo
@@ -77,7 +77,7 @@ public class BarbershopController {
         return ResponseEntity.ok().build();
     }
 
-    @DeleteMapping("/{id}/photo")
+    @DeleteMapping("/{id}/photo/delete")
     public ResponseEntity<Void> deleteBarbershopPhoto(
             @PathVariable UUID id
     ) {

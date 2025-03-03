@@ -40,7 +40,10 @@ public class BarbershopServiceImpl implements BarbershopService {
     public BarbershopResponse createBarbershop(CreateBarbershopRequest request) {
         BarbershopEntity barbershop = new BarbershopEntity();
         barbershop.setName(request.name());
+        barbershop.setDescription(request.description());
         barbershop.setAddress(request.address());
+        barbershop.setLatitude(request.latitude());
+        barbershop.setLongitude(request.longitude());
         barbershop.setPhoneNumber(request.phoneNumber());
         barbershop.setWorkingTime(request.workingTime());
         return barbershopRepository.save(barbershop).toDto();

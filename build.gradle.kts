@@ -38,6 +38,7 @@ dependencies {
     implementation(platform("software.amazon.awssdk:bom:2.27.21"))
     implementation("software.amazon.awssdk:s3")
 
+    implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:4.2.0")
 
 }
 
